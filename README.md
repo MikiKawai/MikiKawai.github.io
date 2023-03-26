@@ -4,7 +4,7 @@
     </div>
     <div style='width:70%;height:300px; display:inline-block; position: absolute;right: 0px'>
         <div style="margin-top: 250px">
-            <p>你好，这里是：<font color="purple"><strong>MikiKawai</strong></font>！</p>
+            <p>Hello，This is：<font color="purple"><strong>MikiKawai</strong></font>！</p>
         </div>
     </div>
 </div>

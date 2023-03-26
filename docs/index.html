@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
 </head>
-<body>
-<p>待开发</p>
+<style>
+    /* 此处的 div 可以依照情况替换成对应的元素名称 */
+    div {
+        /*height: 46px;*/
+        /*去除滚动下滑*/
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+</style>
+<body id="body" style="overflow-x: hidden;  overflow-y: hidden;">
+
+<div style='width:100%;height:100%;overflow-y: hidden'>
+    <div style='width:10%; height:100%;  position: absolute; left: 8px'>
+        <p value="0">可愛くてごめん</p>
+    </div>
+    <div style='width:90%;height:100%; display:inline-block; position: absolute;right: 0px'>
+        <iframe id="iframe" src="../index.html" style='width:100%;height:100%;'></iframe>
+    </div>
+</div>
 </body>
+<script type="text/javascript" src="../js/global.js"></script>
+<script>
+    var listP = document.getElementsByTagName("p");
+    var iframe = document.getElementById("iframe")
+    var listHref = ['./可愛くてごめん.html'];
+    for (const p of listP) {
+        p.addEventListener('click', function () {
+            p.style.color = 'pink'
+            removeCss(p)//重置
+            hrefSetIframe(p)//设置iframe内容
+        })
+    }
+
+    //重置字体颜色
+    function removeCss(p) {
+        for (const i of listP) {
+            if (p !== i) {
+                i.style.color = 'black'
+            }
+        }
+    }
+
+    function hrefSetIframe(p) {
+        //下标
+        var index = p.attributes[0].value;
+        iframe.setAttribute("src", listHref[index])
+    }
+
+</script>
 </html>

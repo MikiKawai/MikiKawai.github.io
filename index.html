@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <title>MikiKawai</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
-</head>
 
+</head>
 <body id="body">
 <div style='width:100%;height:300px; margin-top:100px;'>
     <div style='width:50%; height:300px; display:inline;  position: absolute; left: 0px'>
@@ -19,10 +18,11 @@
     </div>
 </div>
 </body>
-<script>
+<script type="text/javascript" src="./js/global.js"></script>
+<!--<script>
+    //根据当前时间设置页面为暗黑和白色
     var hour = new Date().getHours();
     var body = document.getElementById('body');
-    //根据当前时间设置页面为暗黑和白色
     // alert(hour)
     window.onload = function () {
         if (18 > hour && hour >= 8) {
@@ -33,5 +33,27 @@
             body.style.color = 'white';
         }
     }
-</script>
+
+    //屏蔽F12和右键
+    setInterval(function () {
+        check();
+    }, 2000);
+    var check = function () {
+        function doCheck(a) {
+            if (('' + a / a)['length'] !== 1 || a % 20 === 0) {
+                (function () {
+                }['constructor']('debugger')());
+            } else {
+                (function () {
+                }['constructor']('debugger')());
+            }
+            doCheck(++a);
+        }
+        try {
+            doCheck(0);
+        } catch (err) {
+        }
+    };
+    check();
+</script>-->
 </html>
