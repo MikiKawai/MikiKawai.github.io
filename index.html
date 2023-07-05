@@ -4,96 +4,103 @@
     <meta charset="UTF-8">
     <title>MikiKawai</title>
     <link rel="shortcut icon" href="./images/favicon.ico">
-<!--    <link rel="stylesheet" href="StyleSources/style.css">-->
-<!--        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.css'>-->
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+    <link rel="stylesheet" href="StyleSources/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="StyleSources/swim-box.css"/>
 </head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden
+    }
+
+    #one {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        position: relative;
+    }
+
+</style>
 <body id="body">
-
-
-<div style='width:100%;height:300px; margin-top:100px;'>
-    <div style='width:50%; height:300px; display:inline;  position: absolute; left: 0px'>
-        <img src='./images/MikiKawai.webp' width='350px' style="position: absolute;right: 0px"/>
+<div id="one" style="/*border:1px solid #ddd;*/display: none">
+    <div class="starry_sky">
+        <canvas id="canvas"></canvas>
     </div>
-    <div style='width:50%;height:300px; display:inline-block; position: absolute;right: 0px'>
-        <div style="margin-top: 250px">
-            <!--            <div class="profile">-->
-            <p>你好，这里是 <font color="purple"><strong>MikiKawai</strong></font>！</p>
-            <!--<div class="content">
-                <div class="text">
-                    &lt;!&ndash;                    <h3>alteri</h3>&ndash;&gt;
-                    <h6>Student at FPT University, Vietnam
-                        <h6>For contact: <a href="">me@alteri.dev</a></h6>
-                    </h6>
-                </div>
-                <div class="btn"><span></span></div>
-            </div>
-            <div class="box">
-                <a class="fa-brands fa-discord" href=""></a>
-                <a class="fa-brands fa-facebook" href=""></a>
-                <a class="fa-brands fa-github" href=""></a>
-                <a class="fa-brands fa-twitter" href=""></a>
-                <a class="fa-brands fa-spotify" href=""></a>
-            </div>-->
-            <!--            </div>-->
-        </div>
-    </div>
+
 </div>
+<div id="two">
+    <div style='width:100%;height:300px; margin-top:100px;'>
+        <div style='width:50%; height:300px; display:inline;  position: absolute; left: 0px'>
+            <img src='./images/MikiKawai.webp' width='350px' style="position: absolute;right: 0px"/>
+        </div>
+        <div style='width:50%;height:300px; display:inline-block; position: absolute;right: 0px'>
+            <div style="margin-top: 250px">
+                <p>你好，这里是 <font color="purple"><strong>MikiKawai</strong></font>！</p>
+            </div>
+        </div>
+    </div>
 
-<!--悬浮的方块start-->
-<!-- 外层最大容器 -->
-<div class="wrap" id="box_wrap">
-    <!--包裹所有元素的容器-->
-    <div class="cube">
-        <!--前面图片 -->
-        <div class="out_front">
-            <img src="./images/1.jpg" class="pic"/>
-        </div>
-        <!--后面图片 -->
-        <div class="out_back">
-            <img src="./images/2.jpg" class="pic"/>
-        </div>
-        <!--左面图片 -->
-        <div class="out_left">
-            <img src="./images/3.png" class="pic"/>
-        </div>
-        <!--右面图片 -->
-        <div class="out_right">
-            <img src="./images/4.jpg" class="pic"/>
-        </div>
-        <!--上面图片 -->
-        <div class="out_top">
-            <img src="./images/5.jpg" class="pic"/>
-        </div>
-        <!--下面图片 -->
-        <div class="out_bottom">
-            <img src="./images/6.jpg" class="pic"/>
-        </div>
+    <!--悬浮的方块start-->
+    <!-- 外层最大容器 -->
+    <div class="wrap" id="box_wrap">
+        <!--包裹所有元素的容器-->
+        <div class="cube">
+            <!--前面图片 -->
+            <div class="out_front">
+                <img src="./images/1.jpg" class="pic"/>
+            </div>
+            <!--后面图片 -->
+            <div class="out_back">
+                <img src="./images/2.jpg" class="pic"/>
+            </div>
+            <!--左面图片 -->
+            <div class="out_left">
+                <img src="./images/3.png" class="pic"/>
+            </div>
+            <!--右面图片 -->
+            <div class="out_right">
+                <img src="./images/4.jpg" class="pic"/>
+            </div>
+            <!--上面图片 -->
+            <div class="out_top">
+                <img src="./images/5.jpg" class="pic"/>
+            </div>
+            <!--下面图片 -->
+            <div class="out_bottom">
+                <img src="./images/6.jpg" class="pic"/>
+            </div>
 
-        <!--小正方体 -->
-        <span class="in_front">
+            <!--小正方体 -->
+            <span class="in_front">
                <img src="./images/7.jpg" class="in_pic"/>
            </span>
-        <span class="in_back">
+            <span class="in_back">
                 <img src="./images/9.jpg" class="in_pic"/>
            </span>
-        <span class="in_left">
+            <span class="in_left">
                <img src="./images/10.jpg" class="in_pic"/>
            </span>
-        <span class="in_right">
+            <span class="in_right">
                <img src="./images/11.jpg" class="in_pic"/>
            </span>
-        <span class="in_top">
+            <span class="in_top">
                <img src="./images/12.jpg" class="in_pic"/>
            </span>
-        <span class="in_bottom">
+            <span class="in_bottom">
                <img src="./images/13.jpg" class="in_pic"/>
            </span>
+        </div>
     </div>
 </div>
+
 <!--end-->
 <script>
+    var one = document.getElementById('one')
+    var two = document.getElementById('two')
     if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
         hidden()
         // console.log('iPhone/平板')
@@ -107,9 +114,25 @@
     function hidden() {
         document.getElementById('box_wrap').style.display = 'none'
     }
+
+    one.onclick = function () {
+        one.style.display = "none";
+        two.style.display = "block";
+        // one.style.visibility = 'hidden'
+        // two.style.visibility = 'visible'
+    }
+
+
+    two.onclick = function () {
+        one.style.display = "block";
+        two.style.display = "none";
+    }
+
+
 </script>
 
 <script type="text/javascript" src="StyleSources/global.js"></script>
-<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>-->
+<script type="text/javascript" src="StyleSources/starry-sky.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'/>
 </body>
 </html>
