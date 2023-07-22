@@ -8,6 +8,8 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="StyleSources/swim-box.css"/>
+
+
 </head>
 <style>
     body {
@@ -95,12 +97,11 @@
            </span>
         </div>
     </div>
+    <!--end-->
 </div>
-
-<!--end-->
+</body>
 <script>
-    var one = document.getElementById('one')
-    var two = document.getElementById('two')
+    //pc端才显示
     if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
         hidden()
         // console.log('iPhone/平板')
@@ -115,24 +116,22 @@
         document.getElementById('box_wrap').style.display = 'none'
     }
 
-    one.onclick = function () {
+    //点击实现页面切换
+    var one = document.getElementById('one')
+    var two = document.getElementById('two')
+    /*one.onclick = function () {
         one.style.display = "none";
         two.style.display = "block";
         // one.style.visibility = 'hidden'
         // two.style.visibility = 'visible'
     }
-
-
     two.onclick = function () {
         one.style.display = "block";
         two.style.display = "none";
-    }
-
-
+    }*/
 </script>
-
 <script type="text/javascript" src="StyleSources/global.js"></script>
-<script type="text/javascript" src="StyleSources/starry-sky.js"></script>
+<!--页面下落樱花样式-->
+<script type="text/javascript" src="StyleSources/sakura-style.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'/>
-</body>
 </html>

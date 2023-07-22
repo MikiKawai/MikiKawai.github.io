@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
+
 * {
     outline: none;
     user-select: none;
@@ -224,7 +225,7 @@ body {
     line-height: 50px;
     position: absolute;
     left: 18px;
-    top: calc(75px - 50px/2);
+    top: calc(75px - 50px / 2);
     box-shadow: 0 0 0.5rem #babbbc;
     transition-duration: 0.3s;
 }
