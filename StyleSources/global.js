@@ -14,6 +14,7 @@ window.onload = function () {
 }
 
 //屏蔽F12 debug
+
 setInterval(function () {
     check();
 }, 2000);
@@ -36,6 +37,7 @@ var check = function () {
 };
 check();
 /*==========禁止右键和f12==========*/
+
 document.addEventListener('keydown', function () {
     if (event.keyCode === 123) {
         alert("yo!");
@@ -77,4 +79,10 @@ function pause(ms) {
 
 }).call(this);
 
-
+function  isNight(){
+    var hour =  new Date().getHours;
+    if (18 > hour && hour >= 8) {
+        return true;
+    }
+    return false;
+}
