@@ -132,7 +132,7 @@
 
 **<font color='#3ebf9f'>But things changed,Suddenly</font>**
 
-**<font color='#6a68b0'>但是世事难料
+**<font color='#6a68b0'>但是世事难料</font>**
 
 
 

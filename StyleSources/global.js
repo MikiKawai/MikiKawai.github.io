@@ -36,8 +36,9 @@ var check = function () {
     }
 };
 check();
-/*==========禁止右键和f12==========*/
 
+
+//*==========禁止右键和f12==========*
 document.addEventListener('keydown', function () {
     if (event.keyCode === 123) {
         alert("yo!");
@@ -86,3 +87,4 @@ function  isNight(){
     }
     return false;
 }
+
