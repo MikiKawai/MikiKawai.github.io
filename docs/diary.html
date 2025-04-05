@@ -1,76 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Diary</title>
     <script type="text/javascript" src="../StyleSources/diary.js"></script>
     <style>
-        body{
-            border:0;
-            margin:0;
-            padding:0;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
         }
-        th{
-            width: auto;
-            height: 350px;
+
+        .diary-entry {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
         }
-        img.active {
-        
-        };
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .date {
+            font-style: italic;
+            color: #222;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        .text-image-pair {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .text-content {
+            width: 70%;
+            line-height: 1.6;
+            color: #555;
+            padding-right: 20px;
+        }
+
+        .image-content {
+            width: 30%;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #input-container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #text-input {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #add-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #add-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
+
 <body>
-    <div>
-        <table border="2px"  style="width: 100%;">
-            <tr>
-                <th class="tupian">
-                    <!-- <img class="avatar" src="../images/h1.jpg"/> -->
-                </th>
-                <th>&ensp;&ensp;&ensp;&ensp;</th>
-                <th>
-                    <p style="color: white;">
-                    2024/2/4 0:31
-                    </p>
-                </th>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <p style="color: white;">
-                        我是内容
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3"> 
-                    <img src="../images/1.jpg"/>
-                </td>
-            </tr>
-        </table>
+    <div id="input-container">
+        <!-- <input type="text" id="text-input" placeholder="输入日记文字">
+        <button id="add-button">添加日记</button> -->
     </div>
-</body>
-<script>
+    <div id="diary-container">
+        <!-- 日记内容将动态添加到这里 -->
+    </div>
 
-    for (let i = 0; i < diary.length; i++) {
-        for (let j = 0; j < diary[i].length; j++) {
-            var node = diary[i][j];
-          
-            //主要数组的
-            if (node instanceof Array) {
-                //数组内容只有一个
-                if (node.length === 1) {
+    <script>
+        const diaryContainer = document.getElementById('diary-container');
+        const textInput = document.getElementById('text-input');
+        // const addButton = document.getElementById('add-button');
 
-                    //数组内容有多个
-                } else {
-                    for (const el of node) {
-                        //alert(el)
-                    }
+        // 初始化日记显示
+        for (let i = 0; i < diary.length; i++) {
+            const [avatar, date, texts, images] = diary[i];
+
+            // 创建日记条目容器
+            const diaryEntry = document.createElement('div');
+            diaryEntry.classList.add('diary-entry');
+
+            // 头像和日期
+            const imgAvatar = document.createElement('img');
+            imgAvatar.src = avatar;
+            imgAvatar.alt = 'Avatar';
+            imgAvatar.classList.add('avatar');
+            diaryEntry.appendChild(imgAvatar);
+
+            const pDate = document.createElement('p');
+            pDate.textContent = date;
+            pDate.classList.add('date');
+            diaryEntry.appendChild(pDate);
+
+            // 处理文字和图片对应关系
+            const maxLength = Math.max(texts ? texts.length : 0, images ? images.length : 0);
+            for (let j = 0; j < maxLength; j++) {
+                const textImagePair = document.createElement('div');
+                textImagePair.classList.add('text-image-pair');
+
+                const textContent = document.createElement('div');
+                textContent.classList.add('text-content');
+                if (texts && j < texts.length) {
+                    const pText = document.createElement('p');
+                    // 使用 innerHTML 解析 HTML 代码
+                    pText.innerHTML = texts[j];
+                    textContent.appendChild(pText);
                 }
-            }else{
-                //头像 and 时间
-               
-            }
-        }
-    }
+                textImagePair.appendChild(textContent);
 
-</script>
-</html>
+                const imageContent = document.createElement('div');
+                imageContent.classList.add('image-content');
+                if (images && j < images.length) {
+                    const imgDiary = document.createElement('img');
+                    imgDiary.src = images[j];
+                    imgDiary.alt = 'Diary Image';
+                    imageContent.appendChild(imgDiary);
+                }
+                textImagePair.appendChild(imageContent);
+
+                diaryEntry.appendChild(textImagePair);
+            }
+
+            // 将日记条目添加到容器中
+            diaryContainer.appendChild(diaryEntry);
+        }
+    </script>
+</body>
+
+</html>    
