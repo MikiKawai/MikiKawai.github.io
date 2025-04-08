@@ -2,6 +2,12 @@ const diary = [
     //头像地址，日期，文字数组，图片地址数组
     [
         'https://pic.cnblogs.com/avatar/2176509/20230310225338.png',
+        "2025-04-07T23:34:56.562",
+        ['<font color=pink size="5">i miss u</font>'],
+        ['https://mikikawai.github.io/images/gf.jpg']
+    ],
+    [
+        'https://pic.cnblogs.com/avatar/2176509/20230310225338.png',
         '2023/10/23 22:07',
         ['测试测试测试测试1dfafdasfewrwefdsafewffewCenter Design: A girl with long brown hair adorned with a white headband and bows holds a bouquet of pink roses. She wears a pink outfit, with large blue eyes and a gentle expression.ge Design: No rigid boundary; elements focus centrally without harsh edge restrictions.Background Pattern: Light pink watercolor splatters and dots, adding a soft, dreamy texture.Overall Style: Sweetly adorable, utilizing a watercolor illustration style. Soft color tones, delicate details (like bows, roses), and the girl’s charming appearance create a gentle, heartwarming, and whimsically pretty aesthetic.'],
         ['https://i.loli.net/2018/05/03/5aeb0f98a8b66.jpg']
