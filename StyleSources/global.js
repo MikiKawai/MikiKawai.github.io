@@ -4,7 +4,7 @@ var body = document.getElementById('body');
 // var body = document.getElementsByTagName('body')
 // alert(hour)
 window.onload = function () {
-    if (18 > hour && hour >= 8) {
+    if (18 >= hour && hour >= 8) {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
     } else {
