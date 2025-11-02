@@ -1,7 +1,7 @@
 const diary = [
     //头像地址，日期，文字数组，图片地址数组
     [
-        'https://avatars.githubusercontent.com/u/83951318?v=4',
+        'https://github.com/MikiKawai/MikiKawai.github.io/blob/msater/images/MikiKawai.webp',
         "2025-04-07T23:34:56.562",
         ['<font color=pink size="5">i miss u</font>'],
         ['https://mikikawai.github.io/images/gf.jpg']
