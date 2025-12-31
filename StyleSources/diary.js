@@ -1,6 +1,11 @@
 const diary = [
     //头像地址，日期，文字数组，图片地址数组
     [
+        'https://bkimg.cdn.bcebos.com/pic/6f061d950a7b02087bf4e27f4392e5d3572c11df6253?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080',
+        "2025-12-31 18:15",
+        ['<font color=#FF0080 size="5">那就互不打扰，再见了</font>'],
+    ],
+    [
         'https://github.com/MikiKawai/MikiKawai.github.io/blob/msater/images/MikiKawai.webp',
         "2025-04-07T23:34:56.562",
         ['<font color=pink size="5">i miss u</font>'],
