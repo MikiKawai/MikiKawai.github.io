@@ -3,7 +3,7 @@ const diary = [
     [
         'https://bkimg.cdn.bcebos.com/pic/6f061d950a7b02087bf4e27f4392e5d3572c11df6253?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080',
         "2025-12-31 18:15",
-        ['<font color=#FF0080 size="5">那就互不打扰，再见了</font>'],
+        ['<font color=#FF0080 size="5">那就互不打扰，再见了。删除我也是给别人腾出位置，你说你累了说我后面没有给你爱，你自己呢？你自己同样没有给予。我给不了你什么？你自己跟我谈的时候也清楚啊，你一直不开心，我也有。为什么不能好好的交流。那就这样吧。。。</font>'],
     ],
     [
         'https://github.com/MikiKawai/MikiKawai.github.io/blob/msater/images/MikiKawai.webp',
