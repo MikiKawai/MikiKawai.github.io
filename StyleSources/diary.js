@@ -3,7 +3,7 @@ const diary = [
     [
         'https://bkimg.cdn.bcebos.com/pic/6f061d950a7b02087bf4e27f4392e5d3572c11df6253?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080',
         "2026-01-05 1:39",
-        ['<font color=#FF0080 size="5">我好想你，可你有这么绝情，事情宁愿问别人问ai也不会问对方了，我没有理由继续纠缠下去了，遗憾那就遗憾！</font>'],
+        ['<font color=#FF0080 size="5">我好想你，可你又这么绝情，事情宁愿问别人问ai也不会问对方了，我没有理由继续纠缠下去了，遗憾那就遗憾！</font>'],
     ],
     [
         'https://bkimg.cdn.bcebos.com/pic/6f061d950a7b02087bf4e27f4392e5d3572c11df6253?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080',
