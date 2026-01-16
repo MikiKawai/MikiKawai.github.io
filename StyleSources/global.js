@@ -82,7 +82,7 @@ function pause(ms) {
 
 function  isNight(){
     var hour =  new Date().getHours;
-    if (18 > hour && hour >= 8) {
+    if (18 > hour || hour >= 8) {
         return true;
     }
     return false;

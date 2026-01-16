@@ -54,7 +54,7 @@
         for (const i of listP) {
             if (p !== i) {
                 if(isNight()){
-                     i.style.color = 'white'
+                     i.style.color = 'black'
                      //i.style.color = 'black'
                 }else{
                     i.style.color = 'white'
@@ -70,10 +70,10 @@
     }
     function  isNight(){
         var hour =  new Date().getHours;
-        if (18 > hour && hour >= 8) {
-            return false;
+        if (18 > hour || hour >= 8) {
+            return true;
         }
-        return true;
+        return false;
     }
 
 </script>
